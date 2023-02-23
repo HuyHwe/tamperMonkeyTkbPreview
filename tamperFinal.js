@@ -107,7 +107,7 @@ function marking(thoiGian) {
             markBox.innerHTML = thoiGian.monHoc;
         } else if(markBox.style.backgroundColor == 'red'){
             markBox.style.backgroundColor = 'lightgreen';
-        } else if((JSON.stringify(thoiGian) == JSON.stringify(preBox)) && (markBox.style.backgroundColor == 'lightgreen')){
+        } else if((markBox.innerHTML.slice(6).trim() == thoiGian.monHoc.trim()) && (markBox.style.backgroundColor == 'lightgreen')){
             markBox.style.backgroundColor = '';
             markBox.innerHTML = (thoiGian.gioHoc[i] + 1)/2;
         } else {
